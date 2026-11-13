@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIA x Paperclip</title>
+    <link rel="stylesheet" href="cursor.css">
+    <link rel="stylesheet" href="Paper-clip.css">
+
+</head>
+    <main class="main-page">
+    <img src="ARIA.jpeg" alt="Aria main page" class="aria-background">
+     </main>
+     <div class="aria-quote">
+        <p class="quote-text"><b>"🎶Every little melody leaves a little piece of itself behind🎵"</b></p>
+        <br><br>
+        <p class="scroll-text">⬇ SCROLL DOWN TO EXPLORE ⬇</p>
+     </div>
+
+    <nav class ="slide-menu" id="slideMenu" aria-label="Quick navigation" aria-hidden="true" inert>
+
+        <a href="about.html" target="_self" class="slide-button about">
+            <img src="aboutt.jpeg" alt="About">
+        </a>
+        
+        <a href="community.html" target="_self" class="slide-button community">
+            <img src="community.jpeg" alt="Community">
+        </a>
+
+        <a href="mytracks.html" target="_self" class="slide-button mytracks">
+            <img src="mytracks.jpeg" alt="My tracks">
+        </a>
+
+        <a href="dungeon.html" target="_self" class="slide-button dungeon">
+            <img src="dung0on (2).jpeg" alt="Dungeon">
+        </a>
+        </nav>
+        <script src="Paper-clip.js"></script>
+
+    <script>
+        const slideMenu = document.getElementById("slideMenu");
+        function updateMenu(){
+
+            const show = window.scrollY > 150;
+            slideMenu.classList.toggle("is-visible", show);
+
+            slideMenu.setAttribute(
+                "aria-hidden",
+                String(!show)
+            );
+            slideMenu.inert = !show;
+        }
+        window.addEventListener("scroll", updateMenu, {
+            passive: true
+        });
+
+        updateMenu();
+        
+        </script>
+</body>
+</html>

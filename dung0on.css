@@ -1,0 +1,55 @@
+.comic-background{
+
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    object-position: center;
+    z-index: 0;
+    pointer-events: none;
+
+}
+
+.other-side{
+
+    position:fixed;
+    top:25px;
+    right:25px;
+    width:180px;
+    display:block;
+    z-index: 1000;
+    transform: rotate(-3deg);
+    transition:transform 00.2s ease;
+
+}
+
+.other-side img{
+
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius: 12px;
+
+}
+
+.other-side:hover{
+
+    transform:rotate(0deg)
+    scale(1.06);
+}
+.click-text{
+
+    position: absolute;
+    top:7%;
+    left:90%;
+    transform: translateX(-50%);
+    width:85%;
+    text-align: center;
+    z-index: 10;
+    pointer-events: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:120%;
+    color: rgb(13, 55, 55);
+
+}

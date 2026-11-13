@@ -1,0 +1,7 @@
+html,
+body,
+body *,
+body *::before,
+body *::after{
+    cursor: url("./cursor\ \(1\).png") 3 1, auto !important;  
+}
